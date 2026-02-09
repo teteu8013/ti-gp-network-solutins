@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Shield } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import logo from "@/assets/haliae-logo.png";
 
 const links = [
   { to: "/", label: "Home" },
@@ -18,7 +19,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 text-lg font-bold tracking-tight">
-          <Shield className="h-6 w-6 text-primary" />
+          <img src={logo} alt="Haliae" className="h-8 w-8" />
           <span>
             Haliae<span className="text-primary">.</span>
           </span>

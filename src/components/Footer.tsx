@@ -1,5 +1,6 @@
-import { Shield, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import logo from "@/assets/haliae-logo.png";
 
 export function Footer() {
   return (
@@ -9,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2 text-lg font-bold">
-              <Shield className="h-5 w-5 text-primary" />
+              <img src={logo} alt="Haliae" className="h-7 w-7" />
               Haliae<span className="text-primary">.</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
