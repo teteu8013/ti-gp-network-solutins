@@ -3,6 +3,7 @@ import { Shield, Wifi, Settings, Building, Building2, Truck, Store, ArrowRight, 
 import { Layout } from "@/components/Layout";
 import { AnimatedSection, AnimatedCard } from "@/components/AnimatedSection";
 import { motion } from "framer-motion";
+import heroBg from "@/assets/hero-bg.jpg";
 
 const highlights = [
   { icon: Shield, title: "Segurança", desc: "Proteção completa contra ameaças com firewalls, monitoramento e auditorias de segurança." },
@@ -29,8 +30,10 @@ export default function Index() {
     <Layout>
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-grid opacity-30" />
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
+        <div className="absolute inset-0">
+          <img src={heroBg} alt="" className="h-full w-full object-cover opacity-30" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/70 to-background" />
         <div className="container relative z-10 flex flex-col items-center py-28 md:py-40 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
