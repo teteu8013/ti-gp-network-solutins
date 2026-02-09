@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { Shield, Wifi, Settings, Building, Building2, Truck, Store, ArrowRight, Lock, Eye, Zap, HeadphonesIcon } from "lucide-react";
 import { Layout } from "@/components/Layout";
+import { AnimatedSection, AnimatedCard } from "@/components/AnimatedSection";
+import { motion } from "framer-motion";
 
 const highlights = [
   { icon: Shield, title: "Segurança", desc: "Proteção completa contra ameaças com firewalls, monitoramento e auditorias de segurança." },
@@ -30,18 +32,38 @@ export default function Index() {
         <div className="absolute inset-0 bg-grid opacity-30" />
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background" />
         <div className="container relative z-10 flex flex-col items-center py-28 md:py-40 text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary mb-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary mb-6"
+          >
             <Shield className="h-3.5 w-3.5" />
             Segurança & Disponibilidade em Redes
-          </div>
-          <h1 className="max-w-3xl text-4xl font-bold leading-tight tracking-tight md:text-6xl">
+          </motion.div>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="max-w-3xl text-4xl font-bold leading-tight tracking-tight md:text-6xl"
+          >
             Sua rede protegida e{" "}
             <span className="text-gradient-cyan">sempre disponível</span>
-          </h1>
-          <p className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed"
+          >
             Consultoria especializada em redes corporativas. Segurança robusta, alta disponibilidade e soluções personalizadas para cada cenário.
-          </p>
-          <div className="mt-8 flex gap-4">
+          </motion.p>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-8 flex gap-4"
+          >
             <Link
               to="/contato"
               className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/20"
@@ -54,19 +76,19 @@ export default function Index() {
             >
               Nossos Serviços
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 
       {/* Highlights */}
       <section className="container py-20">
         <div className="grid gap-6 md:grid-cols-3">
-          {highlights.map((h) => (
-            <div key={h.title} className="group rounded-lg border border-border/50 bg-card/50 p-8 transition-all hover:border-primary/30 hover:glow-cyan">
+          {highlights.map((h, i) => (
+            <AnimatedCard key={h.title} delay={i * 0.1} className="group rounded-lg border border-border/50 bg-card/50 p-8 transition-all hover:border-primary/30 hover:glow-cyan">
               <h.icon className="h-10 w-10 text-primary mb-4" />
               <h3 className="text-xl font-semibold mb-2">{h.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{h.desc}</p>
-            </div>
+            </AnimatedCard>
           ))}
         </div>
       </section>
@@ -74,21 +96,23 @@ export default function Index() {
       {/* Why Us */}
       <section className="border-y border-border/50 bg-card/30">
         <div className="container py-20">
-          <h2 className="text-3xl font-bold text-center mb-4">
-            Por que a <span className="text-gradient-cyan">Haliae</span>?
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-lg mx-auto">
-            Combinamos expertise técnica com atendimento personalizado para entregar resultados reais.
-          </p>
+          <AnimatedSection>
+            <h2 className="text-3xl font-bold text-center mb-4">
+              Por que a <span className="text-gradient-cyan">Haliae</span>?
+            </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-lg mx-auto">
+              Combinamos expertise técnica com atendimento personalizado para entregar resultados reais.
+            </p>
+          </AnimatedSection>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {whyUs.map((w) => (
-              <div key={w.title} className="text-center p-6">
+            {whyUs.map((w, i) => (
+              <AnimatedCard key={w.title} delay={i * 0.1} className="text-center p-6">
                 <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-lg border border-primary/20 bg-primary/5">
                   <w.icon className="h-6 w-6 text-primary" />
                 </div>
                 <h4 className="font-semibold mb-2">{w.title}</h4>
                 <p className="text-sm text-muted-foreground">{w.desc}</p>
-              </div>
+              </AnimatedCard>
             ))}
           </div>
         </div>
@@ -96,26 +120,28 @@ export default function Index() {
 
       {/* Scenarios */}
       <section className="container py-20">
-        <h2 className="text-3xl font-bold text-center mb-4">
-          Cenários que <span className="text-gradient-cyan">atendemos</span>
-        </h2>
-        <p className="text-center text-muted-foreground mb-12 max-w-lg mx-auto">
-          Cada negócio tem suas particularidades. Desenvolvemos soluções sob medida para o seu.
-        </p>
+        <AnimatedSection>
+          <h2 className="text-3xl font-bold text-center mb-4">
+            Cenários que <span className="text-gradient-cyan">atendemos</span>
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 max-w-lg mx-auto">
+            Cada negócio tem suas particularidades. Desenvolvemos soluções sob medida para o seu.
+          </p>
+        </AnimatedSection>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {scenarios.map((s) => (
-            <div key={s.title} className="rounded-lg border border-border/50 bg-card/50 p-6 transition-all hover:border-primary/30">
+          {scenarios.map((s, i) => (
+            <AnimatedCard key={s.title} delay={i * 0.1} className="rounded-lg border border-border/50 bg-card/50 p-6 transition-all hover:border-primary/30">
               <s.icon className="h-8 w-8 text-primary mb-4" />
               <h4 className="font-semibold mb-2">{s.title}</h4>
               <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-            </div>
+            </AnimatedCard>
           ))}
         </div>
       </section>
 
       {/* CTA */}
       <section className="border-t border-border/50">
-        <div className="container py-20 text-center">
+        <AnimatedSection className="container py-20 text-center">
           <h2 className="text-3xl font-bold mb-4">
             Pronto para proteger sua <span className="text-gradient-cyan">infraestrutura</span>?
           </h2>
@@ -128,7 +154,7 @@ export default function Index() {
           >
             Fale Conosco <ArrowRight className="h-4 w-4" />
           </Link>
-        </div>
+        </AnimatedSection>
       </section>
     </Layout>
   );

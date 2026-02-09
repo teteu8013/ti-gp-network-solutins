@@ -1,6 +1,7 @@
 import { Layout } from "@/components/Layout";
 import { Shield, Radar, Search, Bug, Server, RefreshCw, Clock, Store, Building, Building2, Truck, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { AnimatedSection, AnimatedCard } from "@/components/AnimatedSection";
 
 const security = [
   { icon: Shield, title: "Firewall & Políticas", desc: "Configuração e gestão de firewalls com políticas de segurança granulares para bloquear ameaças antes que alcancem sua rede." },
@@ -25,14 +26,16 @@ const bySize = [
 function ServiceSection({ title, items, id }: { title: string; items: typeof security; id: string }) {
   return (
     <section id={id} className="py-16">
-      <h2 className="text-2xl font-bold mb-8 text-gradient-cyan inline-block">{title}</h2>
+      <AnimatedSection>
+        <h2 className="text-2xl font-bold mb-8 text-gradient-cyan inline-block">{title}</h2>
+      </AnimatedSection>
       <div className="grid gap-6 sm:grid-cols-2">
-        {items.map((s) => (
-          <div key={s.title} className="rounded-lg border border-border/50 bg-card/50 p-6 transition-all hover:border-primary/30">
+        {items.map((s, i) => (
+          <AnimatedCard key={s.title} delay={i * 0.1} className="rounded-lg border border-border/50 bg-card/50 p-6 transition-all hover:border-primary/30">
             <s.icon className="h-8 w-8 text-primary mb-3" />
             <h3 className="font-semibold mb-2">{s.title}</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
-          </div>
+          </AnimatedCard>
         ))}
       </div>
     </section>
@@ -43,24 +46,24 @@ export default function Servicos() {
   return (
     <Layout>
       <div className="container">
-        <div className="py-16 text-center">
+        <AnimatedSection className="py-16 text-center">
           <h1 className="text-4xl font-bold mb-4">Nossos <span className="text-gradient-cyan">Serviços</span></h1>
           <p className="text-muted-foreground max-w-lg mx-auto">
             Soluções completas em segurança e disponibilidade de redes, adaptadas ao porte e necessidade de cada cliente.
           </p>
-        </div>
+        </AnimatedSection>
 
         <ServiceSection title="Segurança de Redes" items={security} id="seguranca" />
         <ServiceSection title="Alta Disponibilidade" items={availability} id="disponibilidade" />
         <ServiceSection title="Soluções por Porte" items={bySize} id="porte" />
 
-        <div className="py-16 text-center border-t border-border/50">
+        <AnimatedSection className="py-16 text-center border-t border-border/50">
           <h2 className="text-2xl font-bold mb-4">Não encontrou o que precisa?</h2>
           <p className="text-muted-foreground mb-6">Cada projeto é único. Fale conosco para uma solução sob medida.</p>
           <Link to="/contato" className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:shadow-lg hover:shadow-primary/20 transition-all">
             Fale Conosco <ArrowRight className="h-4 w-4" />
           </Link>
-        </div>
+        </AnimatedSection>
       </div>
     </Layout>
   );

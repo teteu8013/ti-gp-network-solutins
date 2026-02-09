@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { toast } from "sonner";
+import { AnimatedSection, AnimatedCard } from "@/components/AnimatedSection";
 
 export default function Contato() {
   const [sending, setSending] = useState(false);
@@ -24,16 +25,15 @@ export default function Contato() {
   return (
     <Layout>
       <div className="container py-16">
-        <div className="text-center mb-12">
+        <AnimatedSection className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Fale <span className="text-gradient-cyan">Conosco</span></h1>
           <p className="text-muted-foreground max-w-lg mx-auto">
             Conte-nos sobre sua necessidade. Nossa equipe retornará em até 24 horas úteis.
           </p>
-        </div>
+        </AnimatedSection>
 
         <div className="grid gap-10 lg:grid-cols-5">
-          {/* Form */}
-          <div className="lg:col-span-3">
+          <AnimatedCard delay={0} className="lg:col-span-3">
             <form onSubmit={handleSubmit} className="space-y-5 rounded-lg border border-border/50 bg-card/50 p-8">
               <div className="grid gap-5 sm:grid-cols-2">
                 <div className="space-y-2">
@@ -78,10 +78,9 @@ export default function Contato() {
                 {sending ? "Enviando..." : "Enviar Mensagem"}
               </Button>
             </form>
-          </div>
+          </AnimatedCard>
 
-          {/* Contact info */}
-          <div className="lg:col-span-2 space-y-6">
+          <AnimatedCard delay={0.15} className="lg:col-span-2 space-y-6">
             <div className="rounded-lg border border-border/50 bg-card/50 p-6 space-y-6">
               <h3 className="text-lg font-semibold">Informações de Contato</h3>
               <div className="space-y-4">
@@ -115,11 +114,10 @@ export default function Contato() {
               </div>
             </div>
 
-            {/* Map placeholder */}
             <div className="rounded-lg border border-border/50 bg-card/50 h-48 flex items-center justify-center">
               <p className="text-sm text-muted-foreground">Mapa em breve</p>
             </div>
-          </div>
+          </AnimatedCard>
         </div>
       </div>
     </Layout>
