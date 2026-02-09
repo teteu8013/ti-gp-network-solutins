@@ -2,6 +2,7 @@ import { Layout } from "@/components/Layout";
 import { Shield, Radar, Search, Bug, Server, RefreshCw, Clock, Store, Building, Building2, Truck, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { AnimatedSection, AnimatedCard } from "@/components/AnimatedSection";
+import logo from "@/assets/haliae-logo.png";
 
 const security = [
   { icon: Shield, title: "Firewall & Políticas", desc: "Configuração e gestão de firewalls com políticas de segurança granulares para bloquear ameaças antes que alcancem sua rede." },
@@ -47,6 +48,7 @@ export default function Servicos() {
     <Layout>
       <div className="container">
         <AnimatedSection className="py-16 text-center">
+          <img src={logo} alt="Haliae" className="h-16 w-16 mx-auto mb-6 opacity-80" />
           <h1 className="text-4xl font-bold mb-4">Nossos <span className="text-gradient-cyan">Serviços</span></h1>
           <p className="text-muted-foreground max-w-lg mx-auto">
             Soluções completas em segurança e disponibilidade de redes, adaptadas ao porte e necessidade de cada cliente.
