@@ -48,7 +48,7 @@ export default function Servicos() {
     <Layout>
       <div className="container">
         <AnimatedSection className="py-16 text-center">
-          <img src={logo} alt="Haliae" className="h-16 w-16 mx-auto mb-6 opacity-80" />
+          <img src={logo} alt="Haliae" className="h-16 w-16 mx-auto mb-6 opacity-80 object-contain drop-shadow-[0_0_10px_hsl(190,90%,50%,0.3)]" />
           <h1 className="text-4xl font-bold mb-4">Nossos <span className="text-gradient-cyan">Serviços</span></h1>
           <p className="text-muted-foreground max-w-lg mx-auto">
             Soluções completas em segurança e disponibilidade de redes, adaptadas ao porte e necessidade de cada cliente.
