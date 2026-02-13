@@ -6,23 +6,23 @@ import { motion } from "framer-motion";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const highlights = [
-  { icon: Shield, title: "Segurança", desc: "Proteção completa contra ameaças com firewalls, monitoramento e auditorias de segurança." },
-  { icon: Wifi, title: "Disponibilidade", desc: "Infraestrutura redundante com failover automático e SLA garantido para sua operação." },
-  { icon: Settings, title: "Soluções Personalizadas", desc: "Projetos sob medida para cada tipo de negócio, do pequeno ao enterprise." },
+  { icon: Shield, title: "Segurança de Ponta a Ponta", desc: "Projetamos e implementamos camadas de proteção integradas — desde firewalls de próxima geração até políticas de acesso granulares — garantindo que cada ponto da sua rede esteja blindado contra ameaças internas e externas." },
+  { icon: Wifi, title: "Alta Disponibilidade", desc: "Desenhamos arquiteturas de rede com redundância ativa, balanceamento de carga e failover automático, assegurando que sua operação nunca pare, mesmo diante de falhas de hardware ou links." },
+  { icon: Settings, title: "Projetos Sob Medida", desc: "Cada empresa tem uma realidade única. Analisamos seu ambiente, mapeamos necessidades e entregamos um projeto de infraestrutura dimensionado para o seu momento atual e preparado para o crescimento futuro." },
 ];
 
 const whyUs = [
-  { icon: Lock, title: "Expertise em Segurança", desc: "Anos de experiência protegendo redes corporativas contra ameaças avançadas." },
-  { icon: Eye, title: "Monitoramento 24/7", desc: "Acompanhamento contínuo da sua infraestrutura com alertas em tempo real." },
-  { icon: Zap, title: "Resposta Rápida", desc: "Time dedicado com SLA de atendimento para incidentes críticos." },
-  { icon: HeadphonesIcon, title: "Suporte Dedicado", desc: "Equipe técnica especializada disponível para sua empresa." },
+  { icon: Lock, title: "Planejamento Estratégico", desc: "Não vendemos equipamentos — planejamos. Cada projeto nasce de uma análise profunda do seu ambiente, objetivos de negócio e requisitos de conformidade, resultando em uma arquitetura sólida e documentada." },
+  { icon: Eye, title: "Monitoramento Proativo", desc: "Implementamos soluções de monitoramento com visibilidade completa: tráfego, desempenho, saúde dos dispositivos e detecção de anomalias em tempo real, antecipando problemas antes que impactem sua operação." },
+  { icon: Zap, title: "Gerência e Operação", desc: "Assumimos a gestão da sua infraestrutura de rede com processos ITIL, controle de mudanças, inventário atualizado e relatórios periódicos de performance e capacidade." },
+  { icon: HeadphonesIcon, title: "Suporte Especializado", desc: "Equipe técnica certificada com experiência em ambientes críticos, disponível para atuar em incidentes, mudanças programadas e evolução contínua do seu ambiente." },
 ];
 
 const scenarios = [
-  { icon: Store, title: "Pequenas Empresas", desc: "Soluções acessíveis com proteção profissional para seu negócio crescer com segurança." },
-  { icon: Building, title: "Médias Empresas", desc: "Infraestrutura escalável com redundância e monitoramento contínuo." },
-  { icon: Building2, title: "Grandes Empresas", desc: "Arquiteturas complexas com alta disponibilidade, compliance e governança." },
-  { icon: Truck, title: "Logística & Transporte", desc: "Conectividade segura entre filiais, centros de distribuição e frota." },
+  { icon: Store, title: "Pequenas Empresas", desc: "Infraestrutura profissional com custo acessível: firewall gerenciado, Wi-Fi corporativo seguro, VPN para trabalho remoto e backup de configurações com suporte técnico contínuo." },
+  { icon: Building, title: "Médias Empresas", desc: "Redes segmentadas com VLANs, monitoramento centralizado, links redundantes, políticas de QoS e gestão de ativos de rede para suportar o crescimento sustentável." },
+  { icon: Building2, title: "Grandes Corporações", desc: "Projetos multi-site com SD-WAN, data centers interconectados, compliance regulatório (LGPD, ISO 27001), NOC dedicado e governança completa de rede." },
+  { icon: Truck, title: "Logística & Transporte", desc: "Conectividade confiável entre filiais, centros de distribuição e operações em campo, com VPNs site-to-site, redes para rastreamento de frota e alta disponibilidade em ambientes distribuídos." },
 ];
 
 export default function Index() {
@@ -42,7 +42,7 @@ export default function Index() {
             className="inline-flex items-center gap-2 rounded-full border border-primary/30 bg-primary/5 px-4 py-1.5 text-xs font-medium text-primary mb-6"
           >
             <Shield className="h-3.5 w-3.5" />
-            Segurança & Disponibilidade em Redes
+            Consultoria & Tecnologia em Infraestrutura de Redes
           </motion.div>
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
@@ -50,8 +50,8 @@ export default function Index() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="max-w-3xl text-4xl font-bold leading-tight tracking-tight md:text-6xl"
           >
-            Sua rede protegida e{" "}
-            <span className="text-gradient-cyan">sempre disponível</span>
+            Planejamento, segurança e{" "}
+            <span className="text-gradient-cyan">gestão de redes</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -59,7 +59,7 @@ export default function Index() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="mt-6 max-w-xl text-lg text-muted-foreground leading-relaxed"
           >
-            Consultoria especializada em redes corporativas. Segurança robusta, alta disponibilidade e soluções personalizadas para cada cenário.
+            Somos especialistas em projetar, implementar e gerenciar infraestruturas de rede corporativas. Do planejamento à operação, garantimos segurança, alta disponibilidade e performance para o seu negócio.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -101,10 +101,10 @@ export default function Index() {
         <div className="container py-20">
           <AnimatedSection>
             <h2 className="text-3xl font-bold text-center mb-4">
-              Por que a <span className="text-gradient-cyan">Haliae</span>?
+              Por que escolher a <span className="text-gradient-cyan">Haliae</span>?
             </h2>
-            <p className="text-center text-muted-foreground mb-12 max-w-lg mx-auto">
-              Combinamos expertise técnica com atendimento personalizado para entregar resultados reais.
+            <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
+              Mais do que fornecedores, somos parceiros estratégicos. Atuamos desde o levantamento de requisitos até a operação contínua, com foco em resultados mensuráveis e evolução constante do seu ambiente.
             </p>
           </AnimatedSection>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -124,12 +124,12 @@ export default function Index() {
       {/* Scenarios */}
       <section className="container py-20">
         <AnimatedSection>
-          <h2 className="text-3xl font-bold text-center mb-4">
-            Cenários que <span className="text-gradient-cyan">atendemos</span>
-          </h2>
-          <p className="text-center text-muted-foreground mb-12 max-w-lg mx-auto">
-            Cada negócio tem suas particularidades. Desenvolvemos soluções sob medida para o seu.
-          </p>
+            <h2 className="text-3xl font-bold text-center mb-4">
+              Soluções para cada <span className="text-gradient-cyan">cenário</span>
+            </h2>
+            <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto">
+              Independente do porte ou segmento, dimensionamos o projeto ideal para a sua realidade — com escalabilidade para acompanhar o crescimento do seu negócio.
+            </p>
         </AnimatedSection>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {scenarios.map((s, i) => (
@@ -146,10 +146,10 @@ export default function Index() {
       <section className="border-t border-border/50">
         <AnimatedSection className="container py-20 text-center">
           <h2 className="text-3xl font-bold mb-4">
-            Pronto para proteger sua <span className="text-gradient-cyan">infraestrutura</span>?
+            Vamos planejar a <span className="text-gradient-cyan">sua rede</span> juntos?
           </h2>
-          <p className="text-muted-foreground mb-8 max-w-md mx-auto">
-            Entre em contato e descubra como a Haliae pode transformar a segurança e disponibilidade da sua rede.
+          <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
+            Conte com a Haliae para desenhar, implementar e gerenciar a infraestrutura de rede que o seu negócio precisa. Fale com nossos especialistas e receba uma proposta personalizada.
           </p>
           <Link
             to="/contato"

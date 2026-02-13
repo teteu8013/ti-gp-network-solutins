@@ -4,10 +4,10 @@ import { AnimatedSection, AnimatedCard } from "@/components/AnimatedSection";
 import logo from "@/assets/haliae-logo.png";
 
 const values = [
-  { icon: Shield, title: "Segurança", desc: "Proteger dados e infraestruturas é o nosso compromisso número um." },
-  { icon: Lightbulb, title: "Inovação", desc: "Buscamos constantemente as melhores tecnologias e práticas do mercado." },
-  { icon: Users, title: "Personalização", desc: "Cada cliente é único — nossas soluções também são." },
-  { icon: Target, title: "Resultado", desc: "Foco em entregar valor mensurável e impacto real no negócio." },
+  { icon: Shield, title: "Segurança", desc: "A proteção da infraestrutura e dos dados dos nossos clientes é inegociável. Cada decisão técnica é tomada com segurança como prioridade." },
+  { icon: Lightbulb, title: "Inovação", desc: "Acompanhamos a evolução do mercado para trazer as melhores tecnologias e práticas, garantindo que nossos clientes estejam sempre à frente." },
+  { icon: Users, title: "Parceria", desc: "Não somos apenas fornecedores — somos uma extensão da equipe de TI dos nossos clientes, com envolvimento genuíno em cada projeto." },
+  { icon: Target, title: "Resultado", desc: "Trabalhamos orientados por métricas e indicadores. Cada projeto tem objetivos claros, prazos definidos e entregáveis mensuráveis." },
 ];
 
 export default function Sobre() {
@@ -17,8 +17,8 @@ export default function Sobre() {
         <AnimatedSection className="py-16 text-center">
           <img src={logo} alt="Haliae" className="h-16 w-16 mx-auto mb-6 opacity-80 object-contain rounded-full drop-shadow-[0_0_10px_hsl(190,90%,50%,0.3)]" />
           <h1 className="text-4xl font-bold mb-4">Sobre a <span className="text-gradient-cyan">Haliae</span></h1>
-          <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Somos uma consultoria especializada em redes corporativas, unindo segurança, disponibilidade e soluções personalizadas para empresas de todos os portes.
+          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Somos uma empresa de consultoria e tecnologia especializada no planejamento, implementação e gestão de infraestruturas de rede corporativas. Atuamos como parceiros estratégicos dos nossos clientes, garantindo ambientes seguros, disponíveis e preparados para o crescimento.
           </p>
         </AnimatedSection>
 
@@ -27,15 +27,13 @@ export default function Sobre() {
             <AnimatedCard delay={0} className="rounded-lg border border-border/50 bg-card/50 p-8">
               <h2 className="text-2xl font-bold mb-4 text-gradient-cyan inline-block">Nossa Missão</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Garantir que a infraestrutura de rede dos nossos clientes seja segura, resiliente e alinhada aos objetivos do negócio. 
-                Acreditamos que tecnologia de qualidade deve ser acessível a empresas de todos os tamanhos.
+                Planejar, projetar e gerenciar infraestruturas de rede que sejam seguras, resilientes e perfeitamente alinhadas aos objetivos de negócio dos nossos clientes. Acreditamos que toda empresa — independente do porte — merece uma rede corporativa robusta, bem documentada e gerenciada com excelência.
               </p>
             </AnimatedCard>
             <AnimatedCard delay={0.1} className="rounded-lg border border-border/50 bg-card/50 p-8">
               <h2 className="text-2xl font-bold mb-4 text-gradient-cyan inline-block">Nossa História</h2>
               <p className="text-muted-foreground leading-relaxed">
-                Fundada por profissionais com ampla experiência em infraestrutura e segurança de redes, a Haliae nasceu da necessidade de oferecer 
-                consultoria de alto nível com atendimento próximo e personalizado, algo raro no mercado.
+                A Haliae nasceu da experiência de profissionais que atuaram por anos em projetos críticos de infraestrutura de rede em empresas de diversos segmentos. Identificamos uma lacuna no mercado: a falta de consultorias que combinassem profundidade técnica com atendimento próximo e personalizado. Desde então, ajudamos dezenas de empresas a transformar suas redes em ativos estratégicos.
               </p>
             </AnimatedCard>
           </div>

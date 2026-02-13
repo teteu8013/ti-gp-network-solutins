@@ -14,7 +14,7 @@ export function Footer() {
               Haliae<span className="text-primary">.</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Tecnologia e Consultoria em redes com foco em segurança, disponibilidade e soluções personalizadas.
+              Consultoria e tecnologia especializada em planejamento, segurança e gestão de infraestruturas de rede corporativas.
             </p>
           </div>
 

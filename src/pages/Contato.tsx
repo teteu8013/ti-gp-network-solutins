@@ -27,8 +27,8 @@ export default function Contato() {
       <div className="container py-16">
         <AnimatedSection className="text-center mb-12">
           <h1 className="text-4xl font-bold mb-4">Fale <span className="text-gradient-cyan">Conosco</span></h1>
-          <p className="text-muted-foreground max-w-lg mx-auto">
-            Conte-nos sobre sua necessidade. Nossa equipe retornará em até 24 horas úteis.
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            Descreva seu cenário e suas necessidades. Nossa equipe técnica analisará sua demanda e retornará com uma proposta personalizada em até 24 horas úteis.
           </p>
         </AnimatedSection>
 
