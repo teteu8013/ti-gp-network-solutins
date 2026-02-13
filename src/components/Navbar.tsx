@@ -19,7 +19,7 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
       <div className="container flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-2 text-lg font-bold tracking-tight">
-          <img src={logo} alt="Haliae" className="h-9 w-9 object-contain drop-shadow-[0_0_6px_hsl(190,90%,50%,0.3)]" />
+          <img src={logo} alt="Haliae" className="h-9 w-9 object-contain rounded-full drop-shadow-[0_0_6px_hsl(190,90%,50%,0.3)]" />
           <span>
             Haliae<span className="text-primary">.</span>
           </span>

@@ -15,7 +15,7 @@ export default function Sobre() {
     <Layout>
       <div className="container">
         <AnimatedSection className="py-16 text-center">
-          <img src={logo} alt="Haliae" className="h-16 w-16 mx-auto mb-6 opacity-80 object-contain drop-shadow-[0_0_10px_hsl(190,90%,50%,0.3)]" />
+          <img src={logo} alt="Haliae" className="h-16 w-16 mx-auto mb-6 opacity-80 object-contain rounded-full drop-shadow-[0_0_10px_hsl(190,90%,50%,0.3)]" />
           <h1 className="text-4xl font-bold mb-4">Sobre a <span className="text-gradient-cyan">Haliae</span></h1>
           <p className="text-muted-foreground max-w-xl mx-auto leading-relaxed">
             Somos uma consultoria especializada em redes corporativas, unindo segurança, disponibilidade e soluções personalizadas para empresas de todos os portes.

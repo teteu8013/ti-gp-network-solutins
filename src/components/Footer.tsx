@@ -10,7 +10,7 @@ export function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center gap-2 text-lg font-bold">
-              <img src={logo} alt="Haliae" className="h-7 w-7 object-contain drop-shadow-[0_0_6px_hsl(190,90%,50%,0.3)]" />
+              <img src={logo} alt="Haliae" className="h-7 w-7 object-contain rounded-full drop-shadow-[0_0_6px_hsl(190,90%,50%,0.3)]" />
               Haliae<span className="text-primary">.</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
