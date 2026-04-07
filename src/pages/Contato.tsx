@@ -90,7 +90,7 @@ export default function Contato() {
                   </div>
                   <div>
                     <p className="text-sm font-medium">Email</p>
-                    <p className="text-sm text-muted-foreground">contato@haliae.com.br</p>
+                    <p className="text-sm text-muted-foreground">haliaetecnologia@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -99,7 +99,7 @@ export default function Contato() {
                   </div>
                   <div>
                     <p className="text-sm font-medium">Telefone</p>
-                    <p className="text-sm text-muted-foreground">(11) 9999-9999</p>
+                    <p className="text-sm text-muted-foreground">(31) 2500-0841</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -108,7 +108,7 @@ export default function Contato() {
                   </div>
                   <div>
                     <p className="text-sm font-medium">Localização</p>
-                    <p className="text-sm text-muted-foreground">São Paulo, SP — Brasil</p>
+                    <p className="text-sm text-muted-foreground">Belo Horizonte, MG — Brasil</p>
                   </div>
                 </div>
               </div>
